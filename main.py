@@ -1,14 +1,14 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import datetime
 import csv
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import re
 
 def extract_followers(page_source):
     match = re.search(r'(\d[\d,]*) Followers', page_source)
     return match.group(1).replace(",", "") if match else "N/A"
 
-def main():
+def scrape_follower_count():
     url = "https://x.com/fanzagames_jhg"
     options = Options()
     options.add_argument("--headless")
@@ -31,4 +31,4 @@ def main():
         driver.quit()
 
 if __name__ == "__main__":
-    main()
+    scrape_follower_count()

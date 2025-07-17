@@ -1,15 +1,7 @@
-# FANZA Games Follower Tracker
+# FANZA Games Follower Tracker (CSV only)
 
-This project tracks the daily follower count of @fanzagames_jhg on X (formerly Twitter) via scraping.
+This project tracks the daily follower count of @fanzagames_jhg and:
 
-## Features
-
-- Uses Selenium to scrape follower count.
-- Runs daily at 9:00 JST via GitHub Actions.
-- Appends data to `logs/followers.csv`.
-
-## Usage
-
-1. Clone the repo.
-2. Push to GitHub.
-3. GitHub Actions will run automatically every day.
+- Saves timestamped follower count to `logs/followers.csv`
+- Runs daily at 9:00 JST via GitHub Actions
+- No external services (Google Sheets, SendGrid) required
